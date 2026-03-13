@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>+BÚFALO | Pasión por el Sabor</title>
+    <meta name="description" content="La mejor sanguchería con sabor extremo. Hamburguesas, Perros Calientes, Shawarma y más.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <span>+BÚ<b>FALO</b></span>
+            </div>
+            <div class="cart-trigger" id="cart-btn">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="assets/tomato.png" class="float-asset f1" alt="">
+            <img src="assets/fry.png" class="float-asset f2" alt="">
+            <img src="assets/tomato.png" class="float-asset f3" alt="">
+            
+            <div class="hero-content">
+                <h1 class="main-title">EL MEJOR<br><span>BÚFALO</span></h1>
+                <a href="#menu" class="cta-button">PIDE AHORA</a>
+            </div>
+        </section>
+
+        <section class="splash-divider">
+            <div class="splash-content">
+                <h2>FRESH, HOT & DELICIOUS</h2>
+                <div class="featured-row">
+                    <img src="assets/hamburguesa.png" class="featured-img" alt="">
+                    <img src="assets/hamburguesa.png" class="featured-img" alt="">
+                    <img src="assets/hamburguesa.png" class="featured-img" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="categories" id="menu">
+            <div class="category-item active" data-category="">Todos</div>
+            <div class="category-item" data-category="hamburguesas">Hamburguesas</div>
+            <div class="category-item" data-category="perros">Perros Calientes</div>
+            <div class="category-item" data-category="shawarma">Shawarma</div>
+            <div class="category-item" data-category="chaufa">Chaufa Broaster</div>
+            <div class="category-item" data-category="salchipapa">Salchipapa</div>
+            <div class="category-item" data-category="alitas">Alitas</div>
+        </section>
+
+        <section class="products-grid" id="products-container">
+            <!-- Products will be injected here by JS -->
+        </section>
+    </main>
+
+    <!-- Modal for Personalization -->
+    <div id="customize-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h2 id="modal-product-name">Personaliza tu pedido</h2>
+            </div>
+            <div class="modal-body">
+                <h3>Elige tus cremas:</h3>
+                <div class="cremas-grid">
+                    <label class="crema-option"><input type="checkbox" value="Mayonesa"> Mayonesa</label>
+                    <label class="crema-option"><input type="checkbox" value="Mostaza"> Mostaza</label>
+                    <label class="crema-option"><input type="checkbox" value="Ketchup"> Ketchup</label>
+                    <label class="crema-option"><input type="checkbox" value="Ají"> Ají Casero</label>
+                    <label class="crema-option"><input type="checkbox" value="Tártara"> Tártara</label>
+                    <label class="crema-option"><input type="checkbox" value="Golf"> Salsa Golf</label>
+                    <label class="crema-option"><input type="checkbox" value="Aceituna"> Crema de Aceituna</label>
+                    <label class="crema-option"><input type="checkbox" value="Parrillera"> Salsa Parrillera</label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="confirm-add" class="confirm-btn">AGREGAR AL CARRITO</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2>TU CARRITO</h2>
+            <button id="close-cart" class="close-cart-btn">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-list">
+            <!-- Cart items will be injected here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>TOTAL:</span>
+                <span id="total-price">S/ 0.00</span>
+            </div>
+            
+            <div class="location-section">
+                <button id="get-location" class="location-btn">
+                    <i class="fas fa-location-arrow"></i> OBTENER MI UBICACIÓN
+                </button>
+                <div id="location-display" class="location-display">
+                    Ubicación no detectada
+                </div>
+            </div>
+
+            <button id="checkout-btn" class="checkout-btn">PEDIR POR WHATSAPP <i class="fab fa-whatsapp"></i></button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
